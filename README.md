@@ -3,4 +3,6 @@ Uncertainty Quantification in Large Dynamical Systems: A framework for faster si
 
 Currently developing the codes in Python platform and making it more user friendly
 
-Packages used: numpy, scipy, scikit-learn, chaospy, igraph, networkx, community
+Packages used: numpy, scipy, scikit-learn, chaospy, igraph, networkx, python-louvain
+
+Download the content of the folder, Navigate to the folder, and run 'python nonlinear_example.py'. 
