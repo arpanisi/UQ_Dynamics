@@ -9,3 +9,5 @@ Download the content of the folder, Navigate to the folder, and run 'python nonl
 
 Please refer to the following paper: 
 Mukherjee, A., Rai, R., Singla, P., Singh, T., & Patra, A. K. (2017). COMPARISON OF LINEARIZATION AND GRAPH CLUSTERING METHODS FOR UNCERTAINTY QUANTIFICATION OF LARGE SCALE DYNAMICAL SYSTEMS. International Journal for Uncertainty Quantification, 7(1).
+
+Currently supported for coupled oscillator problems such as diffusively coupled Van der Pol Oscillator and diffusively coupled Rossler Attractor
