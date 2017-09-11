@@ -6,3 +6,6 @@ Currently developing the codes in Python platform and making it more user friend
 Packages used: numpy, scipy, scikit-learn, chaospy, igraph, networkx, python-louvain
 
 Download the content of the folder, Navigate to the folder, and run 'python nonlinear_example.py'. 
+
+Please refer to the following paper: 
+Mukherjee, Arpan, et al. "COMPARISON OF LINEARIZATION AND GRAPH CLUSTERING METHODS FOR UNCERTAINTY QUANTIFICATION OF LARGE SCALE DYNAMICAL SYSTEMS." International Journal for Uncertainty Quantification 7.1 (2017).
