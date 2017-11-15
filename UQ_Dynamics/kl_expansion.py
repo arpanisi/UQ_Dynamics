@@ -36,8 +36,13 @@ class KLExpansion:
     def cluster_region(self, map_data, cluster_matrix):
 
         region = []
+        eigs = []
+        map_data = map_data.reshape(map_data.size)
         for cluster in cluster_matrix:
             clust = cluster.astype(bool)
             sub_map = map_data[clust]
             domain = np.meshgrid(sub_map, sub_map)
             region.append(self.compute_k_matrix(domain))
+            eigs.append(self.compute_eigen_functions(domain, 5))
+
+        return region, eigs
