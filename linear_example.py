@@ -82,4 +82,4 @@ if cfg['visualization']:
     mean_compare = np.array([moment[0] for moment in moment_compare_list])
     covariance_compare = np.array([np.linalg.norm(moment[1]) for moment in moment_compare_list])
     plt.plot(t, mean_compare)
-plt.show()
+    plt.show()
