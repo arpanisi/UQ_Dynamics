@@ -5,6 +5,7 @@ from abc import abstractmethod, ABCMeta
 import numpy as np
 import math
 import itertools
+from scipy.stats.distributions import invgauss
 
 class Sample:
 
@@ -393,6 +394,38 @@ class GaussQuadrature(SamplingMethod):
             sample_cluster.append(method.generate_samples())
 
         return sample_cluster
+
+
+class LatinHypercube(SamplingMethod):
+
+    def __init__(self, mean, covariance, config=None):
+
+        SamplingMethod.__init__(self, mean, covariance)
+        if config is None:
+            self.num_samples = 1e6
+        else:
+            self.num_samples = config['num_samples']
+        self.num_samples = int(self.num_samples)
+
+    def generate_samples(self):
+
+        Wm = np.ones(self.num_samples) * 1. / self.num_samples
+        z = np.random.multivariate_normal(self._mean, self._covariance, self.num_samples)
+
+        p = self.dim
+        samples = np.zeros(z.shape, dtype=z.dtype)
+
+        for i in range(p):
+            x = z[:, i]
+            r = np.zeros(self.num_samples)
+            rowidx = np.argsort(x)
+            r[rowidx] = np.arange(self.num_samples)
+            samples[:, i] = r
+
+        samples = samples + np.random.rand(samples.shape)
+        samples = samples / self.num_samples
+
+        return Sample(Wm, Wm, samples)
 
 
 class SamplingMethodGenerator:
