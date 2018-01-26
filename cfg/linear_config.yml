@@ -1,0 +1,24 @@
+linear: shallowwater
+
+overlapping: 1
+
+simulation:
+    t0: 0
+    tf: 48000
+    Timestep: 80
+
+shallowwater:
+    L: 60000
+    cf: 0002
+    D: 10
+    N: 80
+    MaxTime: 48000
+    Timestep: 80
+
+clustering:
+    adjacency_tol: 0.00000001
+    method: louvain
+
+visualization: 1
+
+

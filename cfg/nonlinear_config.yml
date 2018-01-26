@@ -1,0 +1,18 @@
+nonlinear: vanderpol
+
+overlapping: 0
+
+model:
+    num_osc: 3
+    epsilon: 0
+
+simulation:
+    t0: 0
+    tf: 10
+    dt: 0.1
+
+clustering:
+    adjacency_tol: 0.00000001
+    method: louvain
+
+visualization: 1
