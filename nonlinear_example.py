@@ -4,7 +4,17 @@ from UQ_Dynamics.nonlinear_model import CoupledOscillatorExample
 import numpy as np
 from scipy.sparse import diags
 import scipy.io as sio
-import os
+import os, sys
+
+# Append path to the UQ Toolkit folder
+sys.path.append(os.environ['UQTK_INS'])
+
+#Loading UQ libraries from UQ Toolkit
+import PyUQTk.uqtkarray as uqtkarray
+import PyUQTk.pce as uqtkpce
+import PyUQTk.tools as uqtktools
+
+
 
 #current_dir = os.path.dirname(os.path.abspath(__file__))
 current_dir = os.getcwd()
@@ -49,7 +59,7 @@ print 'Libraries loaded, setting up nonlinear model'
 
 mdl = CoupledOscillatorExample.model(model_name, config, epsilon=epsilon)
 
-x0 = np.zeros(mdl.dimension)
+x0 = np.random.rand(mdl.dimension)
 cov = diags(np.random.rand(mdl.dimension) * 10).toarray()
 print 'Models loaded. Mean and covariance initialized'
 
