@@ -13,5 +13,7 @@ Mukherjee, A., Rai, R., Singla, P., Singh, T., & Patra, A. K. (2017). COMPARISON
 Currently supported for coupled oscillator problems such as diffusively coupled Van der Pol Oscillator and diffusively coupled Rossler Attractor
 
 Updated clustering techniques: New techniques added: louvain method of community detection
+Currently is being integrated with UQ Toolkit (http://www.sandia.gov/UQToolkit/index.html)
+
 
 For further support, please email me at arpanmuk@buffalo.edu
