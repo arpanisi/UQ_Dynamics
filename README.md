@@ -7,8 +7,10 @@ Packages used: numpy, scipy, scikit-learn, chaospy, igraph, networkx, python-lou
 
 Download the content of the folder, Navigate to the folder, and run 'python nonlinear_example.py'. 
 
-Please refer to the following paper: 
+Please refer to the following papers: 
 Mukherjee, A., Rai, R., Singla, P., Singh, T., & Patra, A. K. (2017). COMPARISON OF LINEARIZATION AND GRAPH CLUSTERING METHODS FOR UNCERTAINTY QUANTIFICATION OF LARGE SCALE DYNAMICAL SYSTEMS. International Journal for Uncertainty Quantification, 7(1).
+
+Mukherjee, Arpan, et al. "Effect of DEM Uncertainty on Geophysical Mass Flow via Identification of Strongly Coupled Subsystem." International Journal for Uncertainty Quantification 9.6 (2019).
 
 Currently supported for coupled oscillator problems such as diffusively coupled Van der Pol Oscillator and diffusively coupled Rossler Attractor
 
